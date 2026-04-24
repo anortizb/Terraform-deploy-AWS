@@ -29,7 +29,7 @@ jobs:
       # 3. Crear bucket si no existe (BOOTSTRAP)
       - name: Ensure S3 backend exists
         run: |
-          BUCKET="bucketyacreado-para-state"
+          BUCKET="bucketyacreado-para-state-andres"
 
           if aws s3api head-bucket --bucket "$BUCKET" 2>/dev/null; then
             echo "Bucket ya existe"

@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "tf_state" {
-  bucket = "bucketyacreado-para-state"
+  bucket = "bucketyacreado-para-state-andres"
 }
 
 resource "aws_s3_bucket_versioning" "this" {
