@@ -14,12 +14,12 @@ variable "sg_config" {
     }))
 } 
 
-variable "account" { 
+variable "cuenta" { 
     description = "cuenta" 
     type        = string 
 }
 
-variable "project" { 
+variable "proyecto" { 
     description = "project" 
     type        = string 
 }

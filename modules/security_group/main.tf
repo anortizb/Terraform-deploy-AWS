@@ -1,6 +1,6 @@
 resource "aws_security_group" "this" { 
     for_each = { for name, config in var.sg_config : name => config } 
-    name = "ause1-sg-${var.account}-${each.value.projectsecuritygroup}" 
+    name = "ause1-sg-${var.cuenta}-${each.value.projectsecuritygroup}" 
     vpc_id      = var.vpc_id 
 
     dynamic "ingress" { 
@@ -21,6 +21,6 @@ resource "aws_security_group" "this" {
         } 
     tags = merge( 
         var.tags, 
-        { Name = "ause1-sg-${var.account}-${var.project}-ec2"} 
+        { Name = "ause1-sg-${var.cuenta}-${var.proyecto}-ec2"} 
         ) 
 }
