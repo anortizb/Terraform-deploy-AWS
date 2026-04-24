@@ -1,8 +1,8 @@
-variable "cuenta" {
+variable "account" {
   type = string
 }
 
-variable "proyecto" {
+variable "project" {
   type = string
 }
 

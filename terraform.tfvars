@@ -1,8 +1,8 @@
-cuenta           = "cuenta"
-proyecto         = "proyecto"
-key_name         = "nombrekeypair"
-private_key_path = "./nombrekeypair.pem"
-vpc_id           = "vpc_id"
+account          = "account"
+project          = "project"
+key_name         = "nombrekeypairandresortiz"
+private_key_path = "./nombrekeypairandresortiz.pem"
+vpc_id           = "vpc-00f479057476a2db8"
 tags = {
   "tag1" = "valor"
 }
@@ -10,10 +10,10 @@ tags = {
 
 ec2_config = {
   instance_1 = {
-    role_name     = "nombredelrolacrear"
-    ami           = "ami a usar"
-    instance_type = "instancetype"
-    subnet_id     = "subnetid"
+    role_name     = "nombredelrolacrear-andresortiz"
+    ami           = "ami-0c1e21d82fe9c9336"
+    instance_type = "t2.micro"
+    subnet_id     = "subnet-00227b47a5f26ec04"
     policy_arn    = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
     policy_arn1   = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
     tagsec2 = {
@@ -21,7 +21,7 @@ ec2_config = {
       "a-tag1" = "tags"
     }
     root_block_device = {
-      volume_size = 80
+      volume_size = 10
       volume_type = "gp3"
       iops        = 3000
     }
@@ -31,9 +31,9 @@ ec2_config = {
 
 sg_config = {
   instance_1 = {
-    name                 = "ause-sg-cuenta-proyecto"
+    name                 = "ause-sg-cuenta-proyecto-andresortiz"
     description          = "Descripcion para grupo de seguridad"
-    vpc_id               = "vpc-id"
+    vpc_id               = "vpc_id"
     projectsecuritygroup = "sgproyect"
     ingress_rules = [
       { from_port = 3389, to_port = 3389, protocol = "tcp", cidr_blocks = ["10.0.0.0/8"] },

@@ -2,16 +2,16 @@ module "module_security_group" {
   source    = "./modules/security_group"
   sg_config = var.sg_config
   tags      = var.tags
-  project   = var.proyecto
-  account   = var.cuenta
+  project   = var.project
+  account   = var.account
   vpc_id    = var.vpc_id
 }
 
 module "module_iam_config" {
   source     = "./modules/iam"
   ec2_config = var.ec2_config
-  project    = var.proyecto
-  account    = var.cuenta
+  project    = var.project
+  account    = var.account
 }
 
 module "module_ec2_instances" {
@@ -19,6 +19,8 @@ module "module_ec2_instances" {
   security_group_ids    = module.module_security_group.security_group_ids
   iam_instance_profiles = module.module_iam_config.instance_profile_names
   ec2_config            = var.ec2_config
+  account               = var.account
+  project               = var.project
   key_name              = var.key_name
   private_key_path      = var.private_key_path
   tags                  = var.tags

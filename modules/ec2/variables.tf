@@ -40,3 +40,13 @@ variable "iam_instance_profiles" {
     description = "Map de los perfiles de instancia IAM" 
     type = map(string) 
 }
+
+variable "project" { 
+    description = "project" 
+    type        = string 
+} 
+
+variable "account" { 
+    description = "cuenta" 
+    type        = string
+}

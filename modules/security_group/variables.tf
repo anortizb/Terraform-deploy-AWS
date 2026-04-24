@@ -1,7 +1,7 @@
 variable "sg_config" { 
     description = "Configuración de los Segurity Group" 
     type = map(object({ 
-    name        = string 
+    name        = string
     description = string 
     vpc_id      = string 
     projectsecuritygroup = string 
@@ -14,12 +14,12 @@ variable "sg_config" {
     }))
 } 
 
-variable "cuenta" { 
+variable "account" { 
     description = "cuenta" 
     type        = string 
 }
 
-variable "proyecto" { 
+variable "project" { 
     description = "project" 
     type        = string 
 }
