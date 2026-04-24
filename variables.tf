@@ -6,6 +6,7 @@ variable "project" {
   type = string
 }
 
+
 variable "ec2_config" {
   description = "Configuración de las instancias EC2"
   type = map(object({
