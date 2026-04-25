@@ -12,8 +12,8 @@ ec2_config = {
   instance_1 = {
     role_name     = "nombredelrolacrear-andresortiz"
     ami           = "ami-0c1e21d82fe9c9336"
-    instance_type = "t2.micro"
-    subnet_id     = "subnet-00227b47a5f26ec04"
+    instance_type = "t3.micro"
+    subnet_id = "subnet-09ac9f21d385834a8"
     policy_arn    = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
     policy_arn1   = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
     tagsec2 = {
@@ -33,8 +33,8 @@ sg_config = {
   instance_1 = {
     name                 = "ause-sg-cuenta-proyecto-andresortiz"
     description          = "Descripcion para grupo de seguridad"
-    vpc_id               = "vpc_id"
-    projectsecuritygroup = "sgproyect"
+    vpc_id               = "vpc-00f479057476a2db8"
+    projectsecuritygroup = "sgproyect-andresortiz"
     ingress_rules = [
       { from_port = 3389, to_port = 3389, protocol = "tcp", cidr_blocks = ["10.0.0.0/8"] },
       { from_port = 0, to_port = 65535, protocol = "tcp", cidr_blocks = ["10.215.3.51/32"] }
